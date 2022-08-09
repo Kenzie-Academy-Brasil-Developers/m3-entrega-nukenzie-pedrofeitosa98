@@ -1,0 +1,21 @@
+.filters__container {
+  height: 2.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 425px) {
+  .filters__container {
+    flex-direction: column;
+    height: fit-content;
+    gap: 0.5rem;
+  }
+}
+
+.filters__container>nav {
+  display: flex;
+  gap: 1rem;
+}

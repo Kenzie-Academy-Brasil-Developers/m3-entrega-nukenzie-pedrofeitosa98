@@ -1,0 +1,23 @@
+.total__container {
+  border: 1px solid var(--grey-2);
+  border-radius: 4px;
+  width: 100%;
+  height: 6rem;
+  padding: 20px 24.5px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.total__container>div {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#valorTotal {
+  color: var(--color-primary);
+  font-size: 1rem;
+  font-weight: 700;
+}

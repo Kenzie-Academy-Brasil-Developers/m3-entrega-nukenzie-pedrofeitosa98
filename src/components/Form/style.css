@@ -1,0 +1,52 @@
+.form__container {
+  border: 1px solid var(--grey-2);
+  border-radius: 4px;
+  width: 100%;
+  height: fit-content;
+  padding: 38px 24.5px;
+  margin-bottom: 1rem;
+}
+
+.form__container>form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  min-height: 22rem;
+}
+
+@media (max-width: 950px) {
+  .description__section {
+    width: 100%;
+  }
+}
+
+.value__section {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .value__section {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
+
+.value__select {
+  width: 50%;
+}
+
+.value__input {
+  width: 40%;
+}
+
+@media (max-width: 1024px) {
+
+  .value__select,
+  .value__input {
+    width: 100%;
+  }
+}
