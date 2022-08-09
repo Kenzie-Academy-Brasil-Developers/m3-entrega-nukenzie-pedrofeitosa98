@@ -62,7 +62,7 @@ function App() {
           />
           <TotalMoney transactionsList={listTransactions}/>
         </aside>
-        <section>
+        <section className='transactionsSection'>
           <Filters />
           <List transactionsList={listTransactions}/>
         </section>

@@ -27,11 +27,11 @@ aside {
 @media (max-width: 950px) {
 
   aside,
-  section {
+  .transactionsSection {
     width: 100%;
   }
 
-  section {
+  .transactionsSection {
     margin-bottom: 1.5rem;
   }
 }
