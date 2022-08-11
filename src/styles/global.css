@@ -136,6 +136,10 @@ option:hover {
   color: var(--grey-3);
 }
 
+.helperText::first-letter {
+  text-transform: capitalize;
+}
+
 .button--big {
   background-color: var(--color-primary);
   border: 2px solid var(--color-primary);

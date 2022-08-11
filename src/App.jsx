@@ -14,8 +14,6 @@ function App() {
   const [isLogin, setLogin] = useState(false)
 
   const [listTransactions, setListTransactions] = useState([])
-  // { description: "Salário recebido", type: "entrada", value: 2500 },
-  // { description: "Conta de luz", type: "despesa", value: -150 }
 
   const [formData, setFormData] = useState({
     description: "",
@@ -23,6 +21,11 @@ function App() {
     value: ""
   })
   
+  function removeTransaction(transactionTarget) {
+    const listFiltered = listTransactions.filter((transaction) => transaction !== transactionTarget)
+    setListTransactions(listFiltered)
+  }
+
   function handleSubmit(e) {
     e.preventDefault()
   
@@ -63,8 +66,10 @@ function App() {
           <TotalMoney transactionsList={listTransactions}/>
         </aside>
         <section className='transactionsSection'>
-          <Filters />
-          <List transactionsList={listTransactions}/>
+          <Filters/>
+          <List 
+          transactionsList={listTransactions}
+          removeTransaction={removeTransaction}/>
         </section>
       </main>
       </>)

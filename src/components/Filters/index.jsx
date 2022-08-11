@@ -1,7 +1,7 @@
 import './style.css'
 
 function Filters() {
-  return (
+    return (
     <div className='filters__container'>
       <h3>Resumo financeiro</h3>
       <nav>
