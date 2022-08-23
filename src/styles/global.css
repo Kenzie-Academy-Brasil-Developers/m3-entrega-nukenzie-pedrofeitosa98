@@ -70,6 +70,11 @@ h4 {
   font-size: 0.75rem;
 }
 
+strong {
+  font-weight: 800;
+  color: var(--grey-3);
+}
+
 body,
 label {
   font-weight: 400;
@@ -177,7 +182,8 @@ option:hover {
   color: var(--grey-1);
 }
 
-.button--nav:active {
+.button--nav:active,
+.button--nav:disabled {
   background-color: var(--color-primary);
   border: 2px solid var(--color-primary);
   box-shadow: var(--box-shadows);

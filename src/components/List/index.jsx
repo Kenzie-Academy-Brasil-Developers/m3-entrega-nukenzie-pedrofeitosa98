@@ -2,9 +2,14 @@ import NoCard from "./NoCard.svg";
 import Card from "../Card/index";
 import "./style.css";
 
-function List({ transactionsList, removeTransaction, transactionsSearch }) {
+function List({
+  transactionsList,
+  removeTransaction,
+  transactionsSearch,
+  buttonFilter,
+}) {
   const listRender =
-    transactionsSearch.length > 0 ? transactionsSearch : transactionsList;
+    buttonFilter !== "todos" ? transactionsSearch : transactionsList;
 
   return (
     <div className="transactionsList">
@@ -18,7 +23,10 @@ function List({ transactionsList, removeTransaction, transactionsSearch }) {
         ))
       ) : (
         <>
-          <h2>Você ainda não possui nenhum lançamento</h2>
+          <h2>
+            Ainda não há transações em{" "}
+            <strong>{buttonFilter.toUpperCase()}</strong>
+          </h2>
           <img src={NoCard} className="noCard fadeInLeft" alt="" />
           <img src={NoCard} className="noCard fadeInLeft" alt="" />
           <img src={NoCard} className="noCard fadeInLeft" alt="" />

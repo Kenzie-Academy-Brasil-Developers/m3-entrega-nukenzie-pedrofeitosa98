@@ -14,6 +14,7 @@ function App() {
   const [isLogin, setLogin] = useState(false);
   const [listTransactions, setListTransactions] = useState([]);
   const [transactionsSearch, setTransactionsSearch] = useState([]);
+  const [buttonFilter, setButtonFilter] = useState("todos");
 
   const [formData, setFormData] = useState({
     description: "",
@@ -65,10 +66,12 @@ function App() {
       (transaction) => transaction.type === filter
     );
     setTransactionsSearch(newFilter);
+    setButtonFilter(filter);
   }
 
   function clearSearch() {
     setTransactionsSearch([]);
+    setButtonFilter("todos");
   }
 
   return (
@@ -86,11 +89,16 @@ function App() {
               <TotalMoney transactionsList={listTransactions} />
             </aside>
             <section className="transactionsSection">
-              <Filters handleSearch={handleSearch} clearSearch={clearSearch} />
+              <Filters
+                handleSearch={handleSearch}
+                clearSearch={clearSearch}
+                buttonFilter={buttonFilter}
+              />
               <List
                 transactionsList={listTransactions}
                 removeTransaction={removeTransaction}
                 transactionsSearch={transactionsSearch}
+                buttonFilter={buttonFilter}
               />
             </section>
           </main>
