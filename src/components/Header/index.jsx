@@ -1,15 +1,19 @@
-import logoLight from './logo-light-mode.svg';
-import './style.css';
+import logoLight from "./logo-light-mode.svg";
+import "./style.css";
+import { FaHome } from "react-icons/fa";
 
-function Header({setLogin}) {
+function Header({ setLogin }) {
   return (
-    <div className='header__container fadeInDown'>
+    <div className="header__container fadeInDown">
       <nav>
         <img src={logoLight} alt="Logo NuKenzie" />
-        <button className="button--nav" onClick={() => setLogin(false)}>Início</button>
+        <button className="button--nav" onClick={() => setLogin(false)}>
+          <FaHome />
+          Início
+        </button>
       </nav>
     </div>
-  )
+  );
 }
 
-export default Header
+export default Header;

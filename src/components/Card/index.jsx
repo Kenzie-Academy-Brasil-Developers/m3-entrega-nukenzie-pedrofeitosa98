@@ -1,30 +1,41 @@
-import './style.css'
+import "./style.css";
+import { FaTrash } from "react-icons/fa";
 
-function Card({transaction, removeTransaction}) {
-  if (transaction.type === 'entrada'){
+function Card({ transaction, removeTransaction }) {
+  if (transaction.type === "entrada") {
     return (
-      <div className='cardEntrada fadeInLeft'>
+      <div className="cardEntrada fadeInLeft">
         <div>
           <h3>{transaction.description}</h3>
           <p>R$ {transaction.value}</p>
-          <button className='button--remove' onClick={() => removeTransaction(transaction)}>X</button>
+          <button
+            className="button--remove"
+            onClick={() => removeTransaction(transaction)}
+          >
+            <FaTrash />
+          </button>
         </div>
-        <span className='helperText'>{transaction.type}</span>
+        <span className="helperText">{transaction.type}</span>
       </div>
-    )
+    );
   }
-  if (transaction.type === 'despesa'){
+  if (transaction.type === "despesa") {
     return (
-      <div className='cardSaida fadeInLeft'>
+      <div className="cardSaida fadeInLeft">
         <div>
           <h3>{transaction.description}</h3>
           <p>R$ {transaction.value}</p>
-          <button className='button--remove' onClick={() => removeTransaction(transaction)}>X</button>
+          <button
+            className="button--remove"
+            onClick={() => removeTransaction(transaction)}
+          >
+            <FaTrash />
+          </button>
         </div>
-        <span className='helperText'>{transaction.type}</span>
+        <span className="helperText">{transaction.type}</span>
       </div>
-    )
+    );
   }
 }
 
-export default Card
+export default Card;
