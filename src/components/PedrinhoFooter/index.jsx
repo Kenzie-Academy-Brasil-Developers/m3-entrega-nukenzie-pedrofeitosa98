@@ -11,7 +11,7 @@ export default function PedrinhoFooter() {
             {" "}
             <FaHeart />{" "}
           </span>
-          por <strong>Pedro Barelli</strong>
+          por <strong>Pedro Feitosa</strong>
         </h4>
         <p>
           Este é um <strong>projeto de estudo</strong>, todos os direitos
